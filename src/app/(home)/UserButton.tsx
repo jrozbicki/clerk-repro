@@ -6,13 +6,16 @@ import {
   SignedOut,
   UserButton as UserButtonClerk,
   useAuth,
+  useUser,
 } from "@clerk/nextjs";
 
 
 export default function UserButton() {
   const auth = useAuth();
+  const { user } = useUser(); 
 
-  console.log(auth);
+  console.log("auth", auth);
+  console.log("user", user);
 
   return (
     <>
